@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import {HelloWorld} from './ex1';
+import { ButtonCounter } from './ex2';
+import { Form } from './ex3';
+import { Login } from './ex4';
+import { Compteur } from './Compteur';
+import TestError from './errorvalidation';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+<Fragment>
+    <Compteur increment="5"></Compteur>
+    <HelloWorld></HelloWorld>
+<ButtonCounter></ButtonCounter> 
+<Form></Form>
+<Login></Login>
+<br></br>
+<br></br>
+<br></br>
+<TestError></TestError>
+</Fragment>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
